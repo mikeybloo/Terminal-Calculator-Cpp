@@ -14,12 +14,12 @@ int handleInput() {
     return n;
 }
 
-int firstNumber() {
+int getFirstNumber() {
     cout << "Input the first number (press ENTER to return): \n";
     return handleInput();
 }
 
-int secondNumber() {
+int getSecondNumber() {
     cout << "Input the second number: \n";
     return handleInput();
 }
@@ -34,27 +34,32 @@ int main() {
         if (answer == "add") {
             cout << "ADDITION \n";
 
-            cout << "Result is: " << firstNumber() + secondNumber() << "\n";
+            cout << "Result is: " << getFirstNumber() + getSecondNumber() << "\n";
         }
 
         if (answer == "sub") {
             cout << "SUBTRACTION \n";
 
-            cout << "Result is: " << firstNumber() - secondNumber() << "\n";
+            cout << "Result is: " << getFirstNumber() - getSecondNumber() << "\n";
         }
 
         if (answer == "mul") {
             cout << "MULTIPLICATION \n";
 
-            cout << "Result is: " << firstNumber() * secondNumber() << "\n";
+            cout << "Result is: " << getFirstNumber() * getSecondNumber() << "\n";
         }
 
         if (answer == "div") {
             cout << "DIVISION \n";
+            int firstNumber = getFirstNumber();
+            int secondNumber = getSecondNumber();
 
-            cout << "Result is: " << firstNumber() / secondNumber() << "\n";
+            while (secondNumber == 0) {
+                cout << "Invalid input! The second number must be higher than 0: \n";
+                secondNumber = getSecondNumber();
+            }
+
+            cout << "Result is: " << firstNumber / secondNumber << "\n";
         }
-
-        
     }
 }
