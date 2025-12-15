@@ -4,4 +4,4 @@ Very very simple terminal calculator program that performs additions, subtractio
 
 ---
 *I start my C++ learning journey today. This is my very very first project I tried doing on my own. I'm not expecting my code to be perfect but I'm here to learn.*
-*I'm split on whether or not I will upgrade this existing project with a GUI or make a new one but I will see.*
+*I'm split on whether or not I will upgrade this existing project with a GUI or make a new repository but I will see.*

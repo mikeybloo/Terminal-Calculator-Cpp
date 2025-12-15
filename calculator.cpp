@@ -1,67 +1,6 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    string answer = "answer";
-
-    while (answer != "") {
-        cout << "Input 'add'/'sub'/'mul'/'div' to perform the intended operation (press ENTER to exit the program): \n";
-        cin >> answer;
-
-        if (answer == "add") {
-            cout << "ADDITION \n";
-            int n1, n2;
-
-            cout << "Input the first number (press ENTER to return): \n";
-            n1 = handleInput();
-
-            cout << "Input the second number: \n";
-            n2 = handleInput();
-
-            cout << "Result is: " << n1 + n2 << "\n";
-        }
-
-        if (answer == "sub") {
-            cout << "SUBTRACTION \n";
-            int n1, n2;
-
-            cout << "Input the first number (press ENTER to return): \n";
-            n1 = handleInput();
-
-            cout << "Input the second number: \n";
-            n2 = handleInput();
-
-            cout << "Result is: " << n1 - n2 << "\n";
-        }
-
-        if (answer == "mul") {
-            cout << "MULTIPLICATION \n";
-            int n1, n2;
-
-            cout << "Input the first number (press ENTER to return): \n";
-            n1 = handleInput();
-
-            cout << "Input the second number: \n";
-            n2 = handleInput();
-
-            cout << "Result is: " << n1 * n2 << "\n";
-        }
-
-        if (answer == "div") {
-            cout << "DIVISION \n";
-            int n1, n2;
-
-            cout << "Input the first number (press ENTER to return): \n";
-            n1 = handleInput();
-
-            cout << "Input the second number: \n";
-            n2 = handleInput();
-
-            cout << "Result is: " << n1 / n2 << "\n";
-        }
-    }
-}
-
 // Handling input errors
 int handleInput() {
     int n;
@@ -73,4 +12,49 @@ int handleInput() {
     }
 
     return n;
+}
+
+int firstNumber() {
+    cout << "Input the first number (press ENTER to return): \n";
+    return handleInput();
+}
+
+int secondNumber() {
+    cout << "Input the second number: \n";
+    return handleInput();
+}
+
+int main() {
+    string answer = "answer";
+
+    while (answer != " ") {
+        cout << "Input 'add'/'sub'/'mul'/'div' to perform the intended operation (press ENTER to exit the program): \n";
+        cin >> answer;
+
+        if (answer == "add") {
+            cout << "ADDITION \n";
+
+            cout << "Result is: " << firstNumber() + secondNumber() << "\n";
+        }
+
+        if (answer == "sub") {
+            cout << "SUBTRACTION \n";
+
+            cout << "Result is: " << firstNumber() - secondNumber() << "\n";
+        }
+
+        if (answer == "mul") {
+            cout << "MULTIPLICATION \n";
+
+            cout << "Result is: " << firstNumber() * secondNumber() << "\n";
+        }
+
+        if (answer == "div") {
+            cout << "DIVISION \n";
+
+            cout << "Result is: " << firstNumber() / secondNumber() << "\n";
+        }
+
+        
+    }
 }
