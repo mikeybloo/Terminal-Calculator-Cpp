@@ -27,8 +27,8 @@ int getSecondNumber() {
 int main() {
     string answer = "answer";
 
-    while (answer != " ") {
-        cout << "Input 'add'/'sub'/'mul'/'div' to perform the intended operation (press ENTER to exit the program): \n";
+    while (answer != "q") {
+        cout << "Input 'add'/'sub'/'mul'/'div' to perform the intended operation or input q to exit the program: \n";
         cin >> answer;
 
         if (answer == "add") {
