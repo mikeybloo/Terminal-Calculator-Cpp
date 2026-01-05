@@ -1,5 +1,9 @@
 #include <iostream>
-using namespace std;
+
+// Gonna try to avoid using standard namespace as a whole now
+using std::cin;
+using std::cout;
+using std::string;
 
 // Handling input errors
 int handleInput() {
